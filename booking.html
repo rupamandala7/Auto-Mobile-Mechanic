@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Service - Auto-Mobile Mechanic</title>
+    <meta name="description" content="Book your automobile service appointment online. Easy scheduling for preventive maintenance, body repair, and car care services.">
+    <meta name="keywords" content="book service, appointment, car service booking, auto repair appointment">
+    
+    <!-- Font Awesome -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="AutoMobile-Mechanic.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car-side"></i>
+                Auto-Mobile-Mechanic
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html" class="active">Booking</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+                
+                <div class="contact-info">
+                    <a href="mailto:contact@automob.co.in" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@automob.co.in</span>
+                    </a>
+                    <a href="tel:9999999999" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span style="white-space:nowrap;">999 999 9999</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title scroll-animate">Book Your Service</h1>
+                <p class="hero-subtitle scroll-animate">
+                    Schedule your automobile service appointment with our expert technicians. 
+                    Quick, reliable, and professional service at your convenience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Booking Form Section -->
+        <section class="booking-section">
+            <div class="container">
+                <div class="booking-container scroll-animate">
+                    <div class="booking-header">
+                        <h2><i class="fas fa-calendar-check"></i> Service Appointment</h2>
+                        <p>Fill out the form below to schedule your service appointment</p>
+                    </div>
+                    
+                    <form id="bookingForm" class="booking-form" autocomplete="off">
+                        <!-- Personal Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-user"></i> Personal Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="name">
+                                        <i class="fas fa-user"></i>
+                                        Full Name
+                                    </label>
+                                    <input type="text" id="name" name="name" placeholder="John Doe" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="email">
+                                        <i class="fas fa-envelope"></i>
+                                        Email Address
+                                    </label>
+                                    <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                                </div>
+                                
+                                <div class="form-group phone-group">
+                                    <label for="phone">
+                                        <i class="fas fa-phone"></i>
+                                        Phone Number
+                                    </label>
+                                    <div class="phone-input">
+                                        <select id="countryCode" name="countryCode" required>
+                                            <option value="" selected disabled>Code</option>
+                                            <option value="+91">+91 (India)</option>
+                                            <option value="+1">+1 (USA)</option>
+                                            <option value="+44">+44 (UK)</option>
+                                            <option value="+61">+61 (Australia)</option>
+                                            <option value="+213">+213 (Algeria)</option>
+                                            <option value="+244">+244 (Angola)</option>
+                                        </select>
+                                        <input type="tel" id="phone" name="phone" placeholder="1234567890" minlength="10" maxlength="10" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Vehicle Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-car"></i> Vehicle Information</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="car-make">
+                                        <i class="fas fa-car-side"></i>
+                                        Car Make
+                                    </label>
+                                    <input type="text" id="car-make" name="car-make" placeholder="Suzuki, Toyota, Honda..." required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="car-model">
+                                        <i class="fas fa-car"></i>
+                                        Car Model
+                                    </label>
+                                    <input type="text" id="car-model" name="car-model" placeholder="Alto, Innova, City..." required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="kilometers">
+                                        <i class="fas fa-tachometer-alt"></i>
+                                        Kilometers Driven
+                                    </label>
+                                    <input type="number" id="kilometers" name="kilometers" placeholder="50000" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Fuel Type -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-gas-pump"></i> Fuel Type</h3>
+                            <div class="fuel-options">
+                                <label class="fuel-option">
+                                    <input type="radio" name="fuel" value="Petrol" required>
+                                    <span class="radio-custom"></span>
+                                    <i class="fas fa-gas-pump"></i>
+                                    <span>Petrol</span>
+                                </label>
+                                
+                                <label class="fuel-option">
+                                    <input type="radio" name="fuel" value="Diesel">
+                                    <span class="radio-custom"></span>
+                                    <i class="fas fa-gas-pump"></i>
+                                    <span>Diesel</span>
+                                </label>
+                                
+                                <label class="fuel-option">
+                                    <input type="radio" name="fuel" value="LPG">
+                                    <span class="radio-custom"></span>
+                                    <i class="fas fa-gas-pump"></i>
+                                    <span>LPG</span>
+                                </label>
+                                
+                                <label class="fuel-option">
+                                    <input type="radio" name="fuel" value="Electric">
+                                    <span class="radio-custom"></span>
+                                    <i class="fas fa-charging-station"></i>
+                                    <span>Electric</span>
+                                </label>
+                                
+                                <label class="fuel-option">
+                                    <input type="radio" name="fuel" value="Hybrid">
+                                    <span class="radio-custom"></span>
+                                    <i class="fas fa-leaf"></i>
+                                    <span>Hybrid</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Service Selection -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-tools"></i> Service Selection</h3>
+                            <div class="service-options">
+                                <label class="service-option">
+                                    <input type="checkbox" name="services[]" value="preventive-maintenance">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="service-details">
+                                        <span class="service-name">Preventive Maintenance</span>
+                                        <span class="service-price">₹850</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="service-option">
+                                    <input type="checkbox" name="services[]" value="body-repair">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="service-details">
+                                        <span class="service-name">Body Repair</span>
+                                        <span class="service-price">₹1700</span>
+                                    </div>
+                                </label>
+                                
+                                <label class="service-option">
+                                    <input type="checkbox" name="services[]" value="car-care">
+                                    <span class="checkbox-custom"></span>
+                                    <div class="service-details">
+                                        <span class="service-name">Car Care</span>
+                                        <span class="service-price">₹1275</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Additional Notes -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-sticky-note"></i> Additional Notes</h3>
+                            <div class="form-group">
+                                <label for="notes">
+                                    <i class="fas fa-comment"></i>
+                                    Special Requirements or Notes
+                                </label>
+                                <textarea id="notes" name="notes" rows="4" placeholder="Any specific issues or special requirements for your vehicle..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i>
+                                Schedule Appointment
+                            </button>
+                            <a href="services.html" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i>
+                                Back to Services
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="why-choose-section">
+            <div class="container">
+                <h2 class="text-center scroll-animate">Why Choose Our Service?</h2>
+                <div class="features-grid">
+                    <div class="feature-card scroll-animate">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Quick Service</h3>
+                        <p>Fast turnaround time with quality work guaranteed</p>
+                    </div>
+                    
+                    <div class="feature-card scroll-animate">
+                        <div class="feature-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Certified Technicians</h3>
+                        <p>Expert mechanics with proper certifications</p>
+                    </div>
+                    
+                    <div class="feature-card scroll-animate">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Warranty Included</h3>
+                        <p>All services come with warranty protection</p>
+                    </div>
+                    
+                    <div class="feature-card scroll-animate">
+                        <div class="feature-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Competitive Pricing</h3>
+                        <p>Best prices with no hidden charges</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Auto-Mobile-Mechanic</h3>
+                <p>Your trusted partner for all automobile repair and service needs. Quality work, competitive prices, and exceptional customer service.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="body-repair-service.html">Body Repair</a></li>
+                    <li><a href="car-care-service.html">Car Care</a></li>
+                    <li><a href="preventive-maintenance-service.html">Preventive Maintenance</a></li>
+                    <li><a href="services.html">All Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> 999 999 9999</p>
+                <p><i class="fas fa-envelope"></i> contact@automob.co.in</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Auto Service Lane, Mechanic City</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto-Mobile-Mechanic. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('bookingForm');
+  if (form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      // Collect form data
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const countryCode = document.getElementById('countryCode').value;
+      const phone = document.getElementById('phone').value;
+      const carMake = document.getElementById('car-make').value;
+      const carModel = document.getElementById('car-model').value;
+      const kilometers = document.getElementById('kilometers').value;
+      const fuel = form.querySelector('input[name="fuel"]:checked')?.value || '';
+      const notes = document.getElementById('notes').value;
+      // Services
+      const serviceCheckboxes = form.querySelectorAll('input[name="services[]"]:checked');
+      let selectedServices = [];
+      let total = 0;
+      serviceCheckboxes.forEach(cb => {
+        const serviceName = cb.closest('.service-option').querySelector('.service-name').textContent;
+        const servicePrice = parseInt(cb.closest('.service-option').querySelector('.service-price').textContent.replace(/[^\d]/g, ''));
+        selectedServices.push({ name: serviceName, price: servicePrice });
+        total += servicePrice;
+      });
+      const discount = total * 0.15;
+      const discountedTotal = total - discount;
+      // Save all data to localStorage
+      localStorage.setItem('bookingDetails', JSON.stringify({
+        name, email, countryCode, phone, carMake, carModel, kilometers, fuel, notes, selectedServices, total, discount, discountedTotal
+      }));
+      // Redirect to thank you page
+      window.location.href = 'booking-success.html';
+    });
+  }
+});
+</script>
+</body>
+</html>

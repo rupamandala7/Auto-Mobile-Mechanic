@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Appointment - Auto-Mobile Mechanic</title>
+    <meta name="description" content="Schedule your automobile service appointment. Choose your preferred date and location for professional auto repair service.">
+    <meta name="keywords" content="appointment scheduling, service appointment, auto repair appointment, car service booking">
+    
+    <!-- Font Awesome -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="AutoMobile-Mechanic.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car-side"></i>
+                Auto-Mobile-Mechanic
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="contact-info">
+                    <a href="mailto:contact@automob.co.in" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@automob.co.in</span>
+                    </a>
+                    <a href="tel:9999999999" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span style="white-space:nowrap;">999 999 9999</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title scroll-animate">Schedule Your Appointment</h1>
+                <p class="hero-subtitle scroll-animate">
+                    Choose your preferred date and location for professional auto repair service. 
+                    We'll come to you for your convenience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Appointment Form Section -->
+        <section class="appointment-section">
+            <div class="container">
+                <div class="appointment-container scroll-animate">
+                    <div class="appointment-header">
+                        <h2><i class="fas fa-calendar-alt"></i> Appointment Details</h2>
+                        <p>Complete your appointment scheduling by providing the following information</p>
+                    </div>
+                    
+                    <form action="booking-success.html" method="get" class="appointment-form" autocomplete="off">
+                        <!-- Appointment Date -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-calendar-check"></i> Appointment Date & Time</h3>
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="date">
+                                        <i class="fas fa-calendar"></i>
+                                        Preferred Date
+                                    </label>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="time">
+                                        <i class="fas fa-clock"></i>
+                                        Preferred Time
+                                    </label>
+                                    <select id="time" name="time" required>
+                                        <option value="" selected disabled>Select Time</option>
+                                        <option value="09:00">9:00 AM</option>
+                                        <option value="10:00">10:00 AM</option>
+                                        <option value="11:00">11:00 AM</option>
+                                        <option value="12:00">12:00 PM</option>
+                                        <option value="14:00">2:00 PM</option>
+                                        <option value="15:00">3:00 PM</option>
+                                        <option value="16:00">4:00 PM</option>
+                                        <option value="17:00">5:00 PM</option>
+                                        <option value="18:00">6:00 PM</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address Information -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-map-marker-alt"></i> Service Location</h3>
+                            <div class="form-group">
+                                <label for="address">
+                                    <i class="fas fa-home"></i>
+                                    Complete Address
+                                </label>
+                                <textarea id="address" name="address" rows="4" placeholder="Enter your complete address including street, area, and landmarks..." required></textarea>
+                            </div>
+                            
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="city">
+                                        <i class="fas fa-city"></i>
+                                        City
+                                    </label>
+                                    <input type="text" id="city" name="city" placeholder="Mumbai, Pune, Delhi..." required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="state">
+                                        <i class="fas fa-map"></i>
+                                        State
+                                    </label>
+                                    <input type="text" id="state" name="state" placeholder="Maharashtra, Kerala, Karnataka..." required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="pincode">
+                                        <i class="fas fa-mail-bulk"></i>
+                                        Pincode
+                                    </label>
+                                    <input type="text" id="pincode" name="pincode" placeholder="400001" pattern="[0-9]{6}" maxlength="6" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Preferences -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-cog"></i> Service Preferences</h3>
+                            <div class="form-group">
+                                <label for="service-type">
+                                    <i class="fas fa-tools"></i>
+                                    Service Type
+                                </label>
+                                <select id="service-type" name="service-type" required>
+                                    <option value="" selected disabled>Select Service Type</option>
+                                    <option value="preventive-maintenance">Preventive Maintenance</option>
+                                    <option value="body-repair">Body Repair</option>
+                                    <option value="car-care">Car Care</option>
+                                    <option value="emergency">Emergency Service</option>
+                                    <option value="inspection">Vehicle Inspection</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="urgency">
+                                    <i class="fas fa-exclamation-triangle"></i>
+                                    Service Urgency
+                                </label>
+                                <select id="urgency" name="urgency" required>
+                                    <option value="" selected disabled>Select Urgency Level</option>
+                                    <option value="normal">Normal (Within 2-3 days)</option>
+                                    <option value="urgent">Urgent (Within 24 hours)</option>
+                                    <option value="emergency">Emergency (Same day)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Notification Preferences -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-bell"></i> Notification Preferences</h3>
+                            <div class="notification-options">
+                                <label class="notification-option">
+                                    <input type="checkbox" id="email" name="email" value="email">
+                                    <span class="checkbox-custom"></span>
+                                    <i class="fas fa-envelope"></i>
+                                    <span>Email Notifications</span>
+                                </label>
+                                
+                                <label class="notification-option">
+                                    <input type="checkbox" id="sms" name="sms" value="sms" required>
+                                    <span class="checkbox-custom"></span>
+                                    <i class="fas fa-sms"></i>
+                                    <span>SMS Notifications</span>
+                                </label>
+                                
+                                <label class="notification-option">
+                                    <input type="checkbox" id="whatsapp" name="whatsapp" value="whatsapp">
+                                    <span class="checkbox-custom"></span>
+                                    <i class="fab fa-whatsapp"></i>
+                                    <span>WhatsApp Notifications</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Additional Notes -->
+                        <div class="form-section">
+                            <h3><i class="fas fa-sticky-note"></i> Additional Information</h3>
+                            <div class="form-group">
+                                <label for="notes">
+                                    <i class="fas fa-comment"></i>
+                                    Special Instructions or Notes
+                                </label>
+                                <textarea id="notes" name="notes" rows="4" placeholder="Any specific instructions, vehicle issues, or special requirements..."></textarea>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fas fa-calendar-plus"></i>
+                                Confirm Appointment
+                            </button>
+                            <a href="booking.html" class="btn btn-secondary">
+                                <i class="fas fa-arrow-left"></i>
+                                Back to Booking
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Benefits -->
+        <section class="benefits-section">
+            <div class="container">
+                <h2 class="text-center scroll-animate">Why Choose Our Mobile Service?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card scroll-animate">
+                        <div class="benefit-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Mobile Service</h3>
+                        <p>We come to your location for your convenience</p>
+                    </div>
+                    
+                    <div class="benefit-card scroll-animate">
+                        <div class="benefit-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h3>Flexible Timing</h3>
+                        <p>Choose your preferred date and time</p>
+                    </div>
+                    
+                    <div class="benefit-card scroll-animate">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Quality Guarantee</h3>
+                        <p>All services come with warranty protection</p>
+                    </div>
+                    
+                    <div class="benefit-card scroll-animate">
+                        <div class="benefit-icon">
+                            <i class="fas fa-dollar-sign"></i>
+                        </div>
+                        <h3>Transparent Pricing</h3>
+                        <p>No hidden charges, clear pricing upfront</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Auto-Mobile-Mechanic</h3>
+                <p>Your trusted partner for all automobile repair and service needs. Quality work, competitive prices, and exceptional customer service.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="body-repair-service.html">Body Repair</a></li>
+                    <li><a href="car-care-service.html">Car Care</a></li>
+                    <li><a href="preventive-maintenance-service.html">Preventive Maintenance</a></li>
+                    <li><a href="services.html">All Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> 999 999 9999</p>
+                <p><i class="fas fa-envelope"></i> contact@automob.co.in</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Auto Service Lane, Mechanic City</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto-Mobile-Mechanic. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

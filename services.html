@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Auto-Mobile Mechanic</title>
+    <meta name="description" content="Professional automobile services including preventive maintenance, body repair, and car care. Expert mechanics with latest techniques.">
+    <meta name="keywords" content="car services, auto maintenance, body repair, car care, preventive maintenance">
+    
+    <!-- Font Awesome -->
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css' rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="AutoMobile-Mechanic.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="images/preventive-maintenance.jpg" as="image">
+    <link rel="preload" href="images/body-repair.jpg" as="image">
+    <link rel="preload" href="images/car-care.jpg" as="image">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-car-side"></i>
+                Auto-Mobile-Mechanic
+            </a>
+            
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                
+                <div class="contact-info">
+                    <a href="mailto:contact@automob.co.in" class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@automob.co.in</span>
+                    </a>
+                    <a href="tel:9999999999" class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span style="white-space:nowrap;">999 999 9999</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-btn">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <h1 class="hero-title scroll-animate">Our Services</h1>
+                <p class="hero-subtitle scroll-animate">
+                    Our representatives are professionally trained and skilled with latest and futuristic techniques 
+                    to provide the best quality service for your vehicle.
+                </p>
+                <div class="hero-buttons">
+                    <a href="booking.html" class="btn btn-primary floating">Book Service</a>
+                    <a href="index.html#contact" class="btn btn-secondary floating">Contact Us</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="services-overview">
+            <div class="container">
+                <div class="overview-card scroll-animate">
+                    <h2>High-Class Service Experience</h2>
+                    <p>
+                        At Auto-Mobile-Mechanic, we provide a high-class service to our customers for their 
+                        happy and memorable driving experience. Our expert team ensures your vehicle receives 
+                        the care it deserves with state-of-the-art equipment and proven techniques.
+                    </p>
+                    <div class="service-highlights">
+                        <div class="highlight">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certified Technicians</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-clock"></i>
+                            <span>Quick Service</span>
+                        </div>
+                        <div class="highlight">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Warranty Included</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Grid -->
+        <section class="services-grid-section">
+            <div class="container">
+                <!-- Preventive Maintenance Service -->
+                <div class="service-item scroll-animate">
+                    <div class="service-content">
+                        <div class="service-image">
+                            <img src="images/preventive-maintenance.jpg" alt="Preventive Maintenance Service" class="parallax" data-speed="0.2">
+                        </div>
+                        <div class="service-details">
+                            <h2>Preventive Maintenance Service</h2>
+                            <h3>Periodically check and keep your car running smoothly</h3>
+                            <div class="discount-badge">
+                                <i class="fas fa-tag"></i>
+                                <span>15% Discount</span>
+                            </div>
+                            
+                            <div class="service-form">
+                                <h4>Select Service:</h4>
+                                <form action="booking.html" method="post" class="service-selection">
+                                    <label class="service-checkbox">
+                                        <input type="checkbox" name="service" value="850" data-name="Preventive Maintenance Service">
+                                        <span class="checkmark"></span>
+                                        <div class="service-info">
+                                            <span class="service-name">Preventive Maintenance Service</span>
+                                            <div class="price-info">
+                                                <span class="original-price">₹1000</span>
+                                                <span class="discounted-price">₹850</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    
+                                    <div class="service-actions">
+                                        <a href="booking.html" class="btn btn-primary">
+                                            <i class="fas fa-calendar-check"></i>
+                                            Schedule Service
+                                        </a>
+                                        <a href="preventive-maintenance-service.html" class="btn btn-secondary">
+                                            <i class="fas fa-info-circle"></i>
+                                            More Details
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Body Repair Service -->
+                <div class="service-item scroll-animate">
+                    <div class="service-content">
+                        <div class="service-image">
+                            <img src="images/body-repair.jpg" alt="Body Repair Service" class="parallax" data-speed="0.2">
+                        </div>
+                        <div class="service-details">
+                            <h2>Body Repair Service</h2>
+                            <h3>Full chassis body repair provided by the experts</h3>
+                            <div class="discount-badge">
+                                <i class="fas fa-tag"></i>
+                                <span>15% Discount</span>
+                            </div>
+                            
+                            <div class="service-form">
+                                <h4>Select Service:</h4>
+                                <form action="booking.html" method="post" class="service-selection">
+                                    <label class="service-checkbox">
+                                        <input type="checkbox" name="service" value="1700" data-name="Body Repair Service">
+                                        <span class="checkmark"></span>
+                                        <div class="service-info">
+                                            <span class="service-name">Body Repair Service</span>
+                                            <div class="price-info">
+                                                <span class="original-price">₹2000</span>
+                                                <span class="discounted-price">₹1700</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    
+                                    <div class="service-actions">
+                                        <a href="booking.html" class="btn btn-primary">
+                                            <i class="fas fa-calendar-check"></i>
+                                            Schedule Service
+                                        </a>
+                                        <a href="body-repair-service.html" class="btn btn-secondary">
+                                            <i class="fas fa-info-circle"></i>
+                                            More Details
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Car Care Service -->
+                <div class="service-item scroll-animate">
+                    <div class="service-content">
+                        <div class="service-image">
+                            <img src="images/car-care.jpg" alt="Car Care Service" class="parallax" data-speed="0.2">
+                        </div>
+                        <div class="service-details">
+                            <h2>Car Care Service</h2>
+                            <h3>Get your car sparkling clean in just minutes</h3>
+                            <div class="discount-badge">
+                                <i class="fas fa-tag"></i>
+                                <span>15% Discount</span>
+                            </div>
+                            
+                            <div class="service-form">
+                                <h4>Select Service:</h4>
+                                <form action="booking.html" method="post" class="service-selection">
+                                    <label class="service-checkbox">
+                                        <input type="checkbox" name="service" value="1275" data-name="Car Care Service">
+                                        <span class="checkmark"></span>
+                                        <div class="service-info">
+                                            <span class="service-name">Car Care Service</span>
+                                            <div class="price-info">
+                                                <span class="original-price">₹1500</span>
+                                                <span class="discounted-price">₹1275</span>
+                                            </div>
+                                        </div>
+                                    </label>
+                                    
+                                    <div class="service-actions">
+                                        <a href="booking.html" class="btn btn-primary">
+                                            <i class="fas fa-calendar-check"></i>
+                                            Schedule Service
+                                        </a>
+                                        <a href="car-care-service.html" class="btn btn-secondary">
+                                            <i class="fas fa-info-circle"></i>
+                                            More Details
+                                        </a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content scroll-animate">
+                    <h2>Ready to Get Started?</h2>
+                    <p>Book your service today and experience the difference of professional auto care.</p>
+                    <div class="cta-buttons">
+                        <a href="booking.html" class="btn btn-primary">
+                            <i class="fas fa-calendar-plus"></i>
+                            Book Appointment
+                        </a>
+                        <a href="index.html#contact" class="btn btn-secondary">
+                            <i class="fas fa-phone"></i>
+                            Call Now
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Auto-Mobile-Mechanic</h3>
+                <p>Your trusted partner for all automobile repair and service needs. Quality work, competitive prices, and exceptional customer service.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="body-repair-service.html">Body Repair</a></li>
+                    <li><a href="car-care-service.html">Car Care</a></li>
+                    <li><a href="preventive-maintenance-service.html">Preventive Maintenance</a></li>
+                    <li><a href="services.html">All Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-phone"></i> 999 999 9999</p>
+                <p><i class="fas fa-envelope"></i> contact@automob.co.in</p>
+                <p><i class="fas fa-map-marker-alt"></i> 123 Auto Service Lane, Mechanic City</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Auto-Mobile-Mechanic. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script src="order.js"></script>
+</body>
+</html>
