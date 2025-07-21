@@ -51,7 +51,7 @@
                     We appreciate your trust in Auto-Mobile-Mechanic.<br>
                     We will get back to you soon with the details via email or phone.
                 </p>
-                <img src="images/thank-you.jpg" alt="Thank You" class="hero-image scroll-animate">
+                <img src="images/thank-you.jpg" alt="Thank You" class="hero-image scroll-animate" style="max-width: 420px; width: 95%; height: auto; margin: 0 auto; display: block;">
             </div>
         </section>
         <!-- Order Summary Section -->
@@ -109,108 +109,6 @@
     <script src="order.js"></script>
     <script>
       window.onload = displaySummary;
-    </script>
-    <script>
-    // Confetti animation (retained)
-    window.addEventListener('DOMContentLoaded', function() {
-      const confettiCanvas = document.createElement('canvas');
-      confettiCanvas.id = 'confetti-canvas';
-      confettiCanvas.style.position = 'fixed';
-      confettiCanvas.style.top = 0;
-      confettiCanvas.style.left = 0;
-      confettiCanvas.style.width = '100vw';
-      confettiCanvas.style.height = '100vh';
-      confettiCanvas.style.pointerEvents = 'none';
-      confettiCanvas.style.zIndex = 9999;
-      document.body.appendChild(confettiCanvas);
-      function resizeCanvas() {
-        confettiCanvas.width = window.innerWidth;
-        confettiCanvas.height = window.innerHeight;
-      }
-      resizeCanvas();
-      window.addEventListener('resize', resizeCanvas);
-      const ctx = confettiCanvas.getContext('2d');
-      const confettiColors = ['#ff61d2', '#00c6fb', '#ffe6fa', '#fffbe6', '#a1c4fd', '#fbc2eb', '#8f6ed5', '#f9d423', '#fc913a', '#ff4e50', '#43e97b', '#38f9d7', '#fa8bff', '#2bd2ff'];
-      const shapes = ['rect', 'circle', 'star'];
-      const confettiPieces = Array.from({length: 500}, () => ({
-        x: Math.random() * confettiCanvas.width,
-        y: Math.random() * -confettiCanvas.height,
-        r: Math.random() * 16 + 8,
-        d: Math.random() * 80 + 30,
-        color: confettiColors[Math.floor(Math.random() * confettiColors.length)],
-        tilt: Math.random() * 10 - 10,
-        tiltAngle: 0,
-        tiltAngleIncremental: (Math.random() * 0.02) + 0.004,
-        shape: shapes[Math.floor(Math.random() * shapes.length)],
-        fallSpeed: Math.random() * 2.8 + 1.44
-      }));
-      function drawStar(cx, cy, spikes, outerRadius, innerRadius, color) {
-        let rot = Math.PI / 2 * 3;
-        let x = cx;
-        let y = cy;
-        let step = Math.PI / spikes;
-        ctx.beginPath();
-        ctx.moveTo(cx, cy - outerRadius);
-        for (let i = 0; i < spikes; i++) {
-          x = cx + Math.cos(rot) * outerRadius;
-          y = cy + Math.sin(rot) * outerRadius;
-          ctx.lineTo(x, y);
-          rot += step;
-          x = cx + Math.cos(rot) * innerRadius;
-          y = cy + Math.sin(rot) * innerRadius;
-          ctx.lineTo(x, y);
-          rot += step;
-        }
-        ctx.lineTo(cx, cy - outerRadius);
-        ctx.closePath();
-        ctx.fillStyle = color;
-        ctx.fill();
-      }
-      function drawConfetti() {
-        ctx.clearRect(0, 0, confettiCanvas.width, confettiCanvas.height);
-        confettiPieces.forEach(p => {
-          ctx.save();
-          ctx.translate(p.x, p.y);
-          ctx.rotate(p.tilt / 20);
-          if (p.shape === 'rect') {
-            ctx.fillStyle = p.color;
-            ctx.fillRect(-p.r/2, -p.r/6, p.r, p.r/2);
-          } else if (p.shape === 'circle') {
-            ctx.beginPath();
-            ctx.arc(0, 0, p.r/2, 0, 2 * Math.PI);
-            ctx.fillStyle = p.color;
-            ctx.fill();
-          } else if (p.shape === 'star') {
-            drawStar(0, 0, 5, p.r/2, p.r/3, p.color);
-          }
-          ctx.restore();
-        });
-        updateConfetti();
-      }
-      function updateConfetti() {
-        confettiPieces.forEach(p => {
-          p.y += p.fallSpeed + Math.cos(p.d) * 0.12;
-          p.x += Math.sin(0.5) * 0.5;
-          p.tiltAngle += p.tiltAngleIncremental;
-          p.tilt = Math.sin(p.tiltAngle) * 15;
-          if (p.y > confettiCanvas.height + 80) {
-            p.x = Math.random() * confettiCanvas.width;
-            p.y = -10;
-          }
-        });
-      }
-      let frame = 0;
-      function animateConfetti() {
-        drawConfetti();
-        frame++;
-        if (frame < 340) {
-          requestAnimationFrame(animateConfetti);
-        } else {
-          confettiCanvas.remove();
-        }
-      }
-      animateConfetti();
-    });
     </script>
 </body>
 </html>
